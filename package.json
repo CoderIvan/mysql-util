@@ -1,0 +1,27 @@
+{
+  "name": "@z-ivan/mysql-util",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CoderIvan/mysql-util"
+  },
+  "author": "Ivan",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-import": "^2.22.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "mysql": "^2.18.1",
+    "squel": "^5.13.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "ci": "npm run lint",
+    "test": "npm run lint"
+  }
+}
