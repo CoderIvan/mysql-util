@@ -1,6 +1,6 @@
 {
   "name": "@z-ivan/mysql-util",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -10,9 +10,11 @@
   "author": "Ivan",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.6.0",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint": "^7.4.0",
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-plugin-import": "^2.22.0",
+    "mocha": "^8.1.1"
   },
   "dependencies": {
     "bluebird": "^3.7.2",
@@ -22,6 +24,6 @@
   "scripts": {
     "lint": "eslint .",
     "ci": "npm run lint",
-    "test": "npm run lint"
+    "test": "npm run lint && mocha ./test"
   }
 }
