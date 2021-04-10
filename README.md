@@ -21,12 +21,12 @@ const pool = mysql.createPool({
 })
 
 // SELECT * FROM test
-await pool.exec((squel) => squel.select().from('test'))
+await pool.exec((squel) => squel.select().from('test').where('a = ?', 1))
 
 
-// SELECT * FROM test LIMIT 10 OFFSET 10
-// SELECT 1 FROM test
-await pool.page((squel) => squel.select().from('test').limit(10).offset(10))
+// SELECT * FROM test WHERE (a = ?) LIMIT 10 OFFSET 10
+// SELECT COUNT(*) AS "_count" FROM test WHERE (a = ?)
+await pool.page((squel) => squel.select().from('test').where('a = ?', 1).limit(10).offset(10))
 
 pool.end()
 ```
