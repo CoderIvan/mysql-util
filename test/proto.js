@@ -67,7 +67,7 @@ describe('proto', () => {
 		expect(results).to.be.an('array')
 		expect(results.length).to.equal(1)
 		expect(results[0]).to.be.an('array')
-		expect(results[0][0]).to.eql('SELECT COUNT(*) AS "_count" FROM (SELECT 1 FROM test WHERE (1 = ?) GROUP BY id)')
+		expect(results[0][0]).to.eql('SELECT COUNT(*) AS "_count" FROM (SELECT 1 FROM test WHERE (1 = ?) GROUP BY id) `_temp`')
 		expect(results[0][1]).to.eql([1])
 	})
 
@@ -77,7 +77,7 @@ describe('proto', () => {
 		expect(results).to.be.an('array')
 		expect(results.length).to.equal(1)
 		expect(results[0]).to.be.an('array')
-		expect(results[0][0]).to.eql('SELECT COUNT(*) AS "_count" FROM (SELECT 1 FROM test WHERE (1 = ?) GROUP BY id)')
+		expect(results[0][0]).to.eql('SELECT COUNT(*) AS "_count" FROM (SELECT 1 FROM test WHERE (1 = ?) GROUP BY id) `_temp`')
 		expect(results[0][1]).to.eql([1])
 	})
 
@@ -96,7 +96,7 @@ describe('proto', () => {
 		expect(count).to.be.an('array')
 		expect(count.length).to.equal(1)
 		expect(count[0]).to.be.an('array')
-		expect(count[0][0]).to.eql('SELECT COUNT(*) AS "_count" FROM (SELECT 1 FROM test WHERE (1 = ?) GROUP BY id)')
+		expect(count[0][0]).to.eql('SELECT COUNT(*) AS "_count" FROM (SELECT 1 FROM test WHERE (1 = ?) GROUP BY id) `_temp`')
 		expect(count[0][1]).to.eql([1])
 	})
 
@@ -120,7 +120,7 @@ describe('proto', () => {
 		expect(count).to.be.an('array')
 		expect(count.length).to.equal(1)
 		expect(count[0]).to.be.an('array')
-		expect(count[0][0]).to.eql('SELECT COUNT(*) AS "_count" FROM (SELECT 1 FROM test WHERE (1 = ?) GROUP BY id)')
+		expect(count[0][0]).to.eql('SELECT COUNT(*) AS "_count" FROM (SELECT 1 FROM test WHERE (1 = ?) GROUP BY id) `_temp`')
 		expect(count[0][1]).to.eql([1])
 
 		expect(tick).eql(1)
